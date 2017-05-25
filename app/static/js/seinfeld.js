@@ -1,4 +1,4 @@
-﻿function recordAnswer(id, selection) {	
+function recordAnswer(id, selection) {	
 	var isCorrect = 0;
 	var correctAnswer = '';
 	
@@ -12,15 +12,13 @@
 		}
 	});
 	
-	console.log('Correct answer was: ' + correctAnswer);
-	
 	if (selection == correctAnswer) {
 		isCorrect = 1;
 		$("#resultMessage").html("Correct!");	
 		$("#resultImage").attr('src', '/static/images/correct.png');
 	}
 	else {
-		$("#resultMessage").html("Incorrect!");
+		$("#resultMessage").html("Incorrect! <br/>The correct answer is " + correctAnswer + ".");
 		$("#resultImage").attr('src', '/static/images/wrong.png');
 	}
 		
@@ -31,5 +29,5 @@
 		async: false
 	});
 	
-	$( "#dialog-message").dialog( "open" );					
+	$( "#dialog-message").dialog( "open" );
 }		
