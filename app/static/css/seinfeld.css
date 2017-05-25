@@ -1,0 +1,27 @@
+﻿.container {
+	margin-top: 20px;
+}
+
+.well:hover {
+	cursor: pointer;		
+	background-image: none !important;
+}
+
+#resultMessage {
+	font-size: 30px;
+	font-weight: 700;
+	padding-left: 20px;
+}
+
+#FinishText {
+    text-align: center;
+	margin-bottom: 20px;
+}
+
+#FinishImage img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;	
+	border: 1px solid black;
+	padding: 15px;
+}

@@ -1,0 +1,10 @@
+﻿{% extends "layout.html" %}
+
+{% block body %}
+<div id="FinishText">
+    <h2>You got {{ percent }}% correct</h2>
+</div>
+<div id="FinishImage">
+    <img style="align: center;" src="/static/images/{{imageToShow}}">
+</div>
+{% endblock %}

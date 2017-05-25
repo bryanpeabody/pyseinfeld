@@ -1,0 +1,44 @@
+﻿{% extends "layout.html" %}
+
+{% block body %}
+	Question {{ question_number }} of {{ total_questions }}
+<br />
+<h2>{{ question.question }}</h2>
+<br />
+<div class="well well-lg" id="FirstOption" onclick="recordAnswer({{question.id}}, 'A');"> {{ question.optionA }} </div>
+<div class="well well-lg" onclick="recordAnswer({{question.id}}, 'B');"> {{ question.optionB }} </div>
+<div class="well well-lg" onclick="recordAnswer({{question.id}}, 'C');"> {{ question.optionC }} </div>
+<div class="well well-lg" onclick="recordAnswer({{question.id}}, 'D');"> {{ question.optionD }} </div>
+
+<div id="dialog-message" style="display: none;" title="Question result">
+    <p>
+        <span><img id="resultImage" src=""></span>
+        <span id="resultMessage"></span>
+    </p>
+</div>
+
+<script>
+  $( function() {
+    $("#dialog-message").dialog({
+		autoOpen: false,
+		modal: true,
+		draggable: false,
+		resizable: false,
+		width: 400,
+		dialogClass: 'ui-dialog-osx',
+		position: { my: "center", at: "center", of: '#FirstOption' },
+		buttons: {
+			"Start over": function() {
+				$(this).dialog("close");
+				window.location = "/";
+			},
+			"Next question": function() {
+				$(this).dialog("close");
+				window.location = "/play";
+			}
+		}
+	});
+  } );
+</script>
+
+	{% endblock %}
