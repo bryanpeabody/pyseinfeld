@@ -328,9 +328,9 @@ def finish():
 		percent = (total_correct / total_questions) * 100
 		
 		if percent == 100:
-			imageToShow = "perfect.png"
+			imageToShow = "perfect-web.png"
 		elif percent >= 70:
-			imageToShow = "so-so.png"
+			imageToShow = "so-so-web.png"
 		
 	return render_template('finish.html',
 							percent=math.floor(percent),

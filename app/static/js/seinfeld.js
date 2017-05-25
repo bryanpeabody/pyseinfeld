@@ -15,11 +15,11 @@ function recordAnswer(id, selection) {
 	if (selection == correctAnswer) {
 		isCorrect = 1;
 		$("#resultMessage").html("Correct!");	
-		$("#resultImage").attr('src', '/static/images/correct.png');
+		$("#resultImage").attr('src', '/static/images/correct-web.png');
 	}
 	else {
 		$("#resultMessage").html("Incorrect! <br/>The correct answer is " + correctAnswer + ".");
-		$("#resultImage").attr('src', '/static/images/wrong.png');
+		$("#resultImage").attr('src', '/static/images/wrong-web.png');
 	}
 		
 	// Record 
