@@ -248,9 +248,9 @@ questions = [
     
 total_questions = len(questions)      
 
+# Setup routes
 @app.route('/')
 def index():	
-	print(total_questions)
 	# Setup/reset data that will be in the session
 	shown_questions = []	
 	total_correct = 0
